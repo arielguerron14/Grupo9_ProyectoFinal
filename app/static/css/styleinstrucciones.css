@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif; 
+}
+body {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #B1B0B5;
+    background-size: cover;
+	
+}
+.image-container {
+    background-image: url('/app/static/img/Evain.gif');
+    background-size: cover; /* o puedes usar 'contain' según tus necesidades */
+
+    width: 440px; /* Ancho deseado de la imagen */
+    height: 467px; /* Alto deseado de la imagen */
+    margin: 0; /* Eliminar márgenes */
+    background-position: right 15px top; /* Mover la imagen hacia la derecha */
+}
+.container {
+	background-color: #f7f6f0;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px #ccc;
+	padding: 20px;
+	width: 70%;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+h2 {
+	color: #446688;
+}
+p {
+	margin-bottom: 20px;
+}
+.info-childs{
+    width: 100%;
+    padding: 0 20px;
+
+}
+.info-childs h2 {
+    font-size: 2.5rem;
+    
+}
+.info-childs p {
+    margin: 15px 0;
+    color: #3b4a6b;
+}
+.info-childs input {
+    background-color: transparent;
+    outline: none;
+    border:solid 2px #3b4a6b;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #3b4a6b;
+    cursor: pointer;
+    transition: background-color .3s ease;
+
+}
+.info-childs input:hover {
+    background-color: #3b4a6b;
+    border: none;
+    color: #d4d7de;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+
+/* Define la animación para el texto */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Mueve el texto hacia arriba al principio */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Mueve el texto de vuelta a su posición original */
+    }
+}
+
+/* Aplica la animación al texto */
+.container h2, .container p {
+    animation: fadeIn 1s ease forwards;
+    opacity: 0; /* Inicialmente, el texto está oculto */
+}

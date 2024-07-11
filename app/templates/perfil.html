@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<style>
+#texto {
+    font-family: 'Montserrat', sans-serif; /* Aplicar la fuente Montserrat */
+}
+</style>
+<title>Perfil</title>
+
+<link rel="stylesheet" href="/app/static/css/styleperfil.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styleperfil.css') }}">
+<script src="/app/static/js/scriptperfil.js"></script>   
+<script src="{{ url_for('static', filename='js/scriptperfil.js') }}"></script>
+</head>
+<body>
+
+<div class="main-container">
+    <div class="header">
+            <div class="test-title">RESULTADOS DEL TEST PERSONALIDAD</div>
+            <div class="logo-container">
+            <img src="/app/static/img/TEXTC.png" alt="Logo image">
+            </div>
+    </div>
+        
+    <div class="content">
+        <div class="containerizquierda">
+            
+                <div class="subcontainer">
+                    <h3>Recomendaciones</h3>
+                    <p>Te recoemndamos que..</p>
+                </div>
+                <div class="subcontainer">
+                    <h3>Videos</h3>
+                    <p>VIDEOS</p>
+                </div>
+                <div class="subcontainer">
+                    <h3>ANEXOS</h3>
+                    <p>ANEXOS</p>
+                    <div class="bottom-section">
+                    </div>
+                </div>
+            
+        </div>
+
+        <div class="containercenter">
+            <div class="subcontainer">
+                <h3>DATOS DEL USUARIO</h3>
+                <ul style="text-align: left; list-style-type: none; padding: 0;">
+                    <li><strong>Nombre:</strong> Ana García</li>
+                    <li><strong>Edad:</strong> 32 años</li>
+                    <li><strong>Profesión:</strong> Psicóloga clínica</li>
+                    <li><strong>Intereses:</strong> Psicología, desarrollo personal, tecnología</li>
+                </ul>
+            </div>
+                <div class="subcontainer">
+                    <div class="split-container">
+                        <div class="top-section">
+                            <h3>TEST PRELIMINAR</h3>
+                            <p>--TEXTO AQUI--</p>
+                        </div>
+                        <div class="bottom-section">
+                        </div>
+                    </div>
+                </div>
+                <div class="subcontainer">
+                    <div class="split-container">
+                        <div class="top-section">
+                            <h3>DIAGNÓSTICO</h3>
+                            <p>--TEXTO AQUI--</p>
+                        </div>
+                        <div class="bottom-section">
+                        </div>
+                    </div>
+                </div>
+                <div class="subcontainer">
+                    <div class="split-container">
+                        <div class="top-section">
+                            <h3>DESTREZAS DEL USUARIO</h3>
+                            <p>--TEXTO AQUI--</p>
+                        </div>
+                        <div class="bottom-section">
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <a href="{{ url_for('descargar_resultados') }}" class="btn">DESCARGAR RESULTADOS</a>
+
+
+                    <button class="btn">FINALIZAR</button>
+                </div>
+        </div>    
+
+        <div class="containerderecha">
+                <div class="evasaludo-container">
+                <img src="/app/static/img/EVASALUDO.gif" alt="image DE LOGOTEM">
+                </div>
+            <div class="subcontainer">
+                <p>CHAT BOT</p>
+            </div>
+        </div>    
+    </div>
+</div>
+</body>
+</html>

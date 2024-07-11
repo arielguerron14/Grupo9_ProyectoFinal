@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/app/static/css/stylefuncionamiento.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylefuncionamiento.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="/app/static/js/scriptFuncionamiento.js"></script>    
+    <script src="{{ url_for('static', filename='js/scriptFuncionamiento.js') }}"></script>
+
+
+    <title>Funcionamiento</title>
+
+</head>
+<body>      
+    <div class="logimg"></div>
+    <div class="container">
+        <div class="img"></div>     
+            <div class="content">
+                <div class="card h2" id="text-container">
+                    <h2 id="text1" class="text active">¡Hola! Mi nombre es Evaind. Un gusto conocerte.</h2>
+                    <h2 id="text2" class="text">Voy a ayudarte a evaluar tu salud mental y tu comportamiento.</h2>
+                    <h2 id="text3" class="text">Para conocerte un poco mejor, vamos a hablar de ti.</h2>
+                    <h2 id="text4" class="text">Te orientaré sobre mis funcionalidades y cómo trabajo.</h2>
+                    <h2 id="text5" class="text">Estoy preparado para la exploración con IA.</h2>
+                    <h2 id="text6" class="text">Vamos a explorar tu salud mental mediante imágenes.</h2>
+                    <h2 id="text7" class="text">Basándome en tus interacciones y respuestas,</h2>
+                    <h2 id="text8" class="text">Te evaluaré y diagnosticaré a fondo para lograr entenderte.</h2>
+                    <h2 id="text9" class="text">Así que, ¡empecemos! Y no te preocupes, estoy aquí para ayudarte.</h2>
+                </div>
+            </div>
+        <div class="footer">
+            <form action="/principal" method="get">
+                
+            <input type="submit"   value="Aceptar"  > 
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
