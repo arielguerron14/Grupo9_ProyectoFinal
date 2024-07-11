@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif; 
+}
+
+body {
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    height: 100vh;
+    background: linear-gradient(rgba(247, 252, 255, 0.863), rgb(221, 255, 255)), url('../img/fondo.jpg');
+    background-size: cover;
+}
+:root {
+  /* Variables para el ancho de los contenedores */
+  --container-left-width: 20%;
+  --container-center-width: 55%;
+  --container-right-width: 20%;
+  --container-height: 95%;
+  --container-height: 95%;
+  --container-height: 95%;
+
+  /* Variables para el alto de los contenedores */
+  --main-container-width: 95vw; /* Ancho del .main-container */
+  --main-container-height: 150vh; /* Altura del .main-container */
+
+  --content-width: 90vw; /* Ajusta este valor según necesites */
+  --content-height: 150vh; /* 'auto' para ajustar según el contenido, o un valor específico */
+}
+  /* Main container styling */
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    width: var(--main-container-width); /* Ancho controlado por variable */
+    height: var(--main-container-height); /* Altura controlada por variable */
+    align-items: center;
+  }
+
+.content {
+    display: grid;
+    grid-template-columns: var(--container-left-width) var(--container-center-width) var(--container-right-width);
+    gap: 20px;/* Espacio entre columnas y filas */
+    width: var(--content-width); /* Ancho controlado por variable */
+    height: var(--content-height); /* Altura controlada por variable, 'auto' o un valor específico */
+    padding: 5px;
+    align-items: start;
+    margin: 5px auto; /* Centra el .content horizontalmente */
+}
+.header {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%; /* Full width to align logo to the right */
+  margin: 4px;
+  padding: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for aesthetics */
+}
+.test-title {
+  font-size: 30px;
+  display: flex;
+  justify-content: left;
+  width: 100%; /* Full width to use space effectively */
+  padding: 20px;
+}
+.logo-container img {
+  width: 186px;
+  height: 73px;
+}
+.evasaludo-container {
+  display: flex; /* Activa Flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 37%; /* Asegúrate de que el contenedor tenga una altura para que funcione la alineación vertical */
+}
+.evasaludo-container img {
+  width: 250px;
+  height: 250px;
+}
+.containerizquierda, .containercenter, .containerderecha, .main-container {
+  /* Aplica el alto desde la variable. Si necesitas diferentes altos, define y aplica variables separadas */
+  height: var(--container-height);
+}
+.containerizquierda {
+  grid-column: 1; /* Coloca en la primera columna */
+  grid-row: 1 / span 2; /* Extiende desde la primera fila a través de dos filas */
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  gap: 10px;
+}
+
+.containercenter {
+  grid-column: 2; /* Coloca en la segunda columna */
+  grid-row: 1; /* Coloca en la primera fila */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 10px;
+}
+.containerderecha {
+  grid-column: 3; /* Coloca en la tercera columna */
+  grid-row: 1; /* Coloca en la tercera fila, es decir, debajo de las demás */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 10px;
+}
+
+  /* Subcontainer styling */
+.subcontainer {
+  flex-grow: 1; /* Permite que cada subcontenedor crezca igualmente */
+  border: 2px solid #000; /* Hace el borde más grueso y visible */
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.subcontainer h3 {
+  margin-bottom: 10px; /* Espacio entre el título y el texto */
+}
+
+/*.subcontainer p {
+   /*Estilos adicionales para el texto si es necesario *
+}*/
+  /* Last subcontainer in the right column */
+.subcontainer.last {
+    background-color: #ccc;
+}
+
+  /* Button styling */
+.buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+  :root {
+    --content-width: 95vw; /* Más ancho en pantallas más pequeñas */
+    --content-height: auto; /* Altura ajustada automáticamente */
+  }
+}
+
+

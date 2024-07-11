@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Inicio o Registro</title>
+ 
+
+
+
+</head>
+<body>
+
+
+    
+    <div class="mi-imagen"></div>
+   
+
+ 
+      
+    <div class="container-form register">
+      
+        <div class="information">
+            <div class="info-childs">
+                <h2>Bienvenido</h2>
+                
+                
+                <p> Para acceder inicia sesion o registrate</p>
+                <input type="button"   value="Iniciar Sesion" id="sing-in" >
+                
+
+            </div>
+
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Crear Cuenta </h2>
+                <div class="icons">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAWBJREFUSEu1lY1NxTAMhP02gUmATWASYBJgEmAS2AT6Vbno8temT6qlqmpi+3yX2L3EyXY5OX/MANxHBM9dev9GBM/38v2VnmGdWwA3EfGWkm4RBewhgTZ+I4CXiHg+IB8gH4s/cYX1AB5T5QfyZ9fXGqQGQJaf5I6+Twt1AMWGSjH8MBLixz7nxD4xrK1WA3ya5u/JWQmVvPftkuJ32wOopXGAPbm4DMTLOPSVhTOoAbLTXvYkmaSVdOuBO4BXUdCcAMDF5aV6CiwAqECHlx0mk+PWLdAZOMA1DDw+F+8ATvEagD9jmy+IA9Tde+QWDWMdgEaBhVvTmdU+Z+aNuHlNdRMIohsBpEM1PVnzZnNJHbe4IKNRoQmpEaCx4Ynq5mqq740K1qTnnjy9iQtLzi7b3riWPIziItAKUbIm+YiBAvyH02MjBs0EnWHgPupuP2D2R+vFRZv5Jx+YFq3r6QD/Wc9YGdHIjH4AAAAASUVORK5CYII="/>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAT1JREFUSEu1lY2NwjAMhV83gUmATWASYBK4Se42ATahX5VEbur8FB2WUFAT+9l+L86gL9vw5fjqAdhL4rcL63Nc/yS9wsr/otUANpJuIWgtBoAHSawLKwFcJJ1XtI/gP+N5/GbmAfQGJyhVWrvmIDkADo9K5gQlyN2csQmxfwrcTEdygN9Gz7dOr/OKAeHcAuAYSC0VQNZkF41q8Ynqsn6QPqnLVtDqve1vK5l01gIgSRxLRvax961kyJ4qZhVAbq4KC7YGIPFgK/AAZoQVSisJY4ptAbyDPQBeYkkQLZLjGCAZOwpsK7174wIw0KjiP0hOfK25aL0kJwV5N7k2KnoB0iXzAPhW0ngPQHPYxf57IC0Au594XPPglAAWE9SqpOfJjEMN8uLzyEjhO3J0XzJvmlYU+vlWTwWfRx8934+GURlCF0MNAAAAAElFTkSuQmCC"/>
+
+                </div>
+                <p>O usa tu Email para crear una cuenta </p>
+                <form class="formu" action="/registro" method="post">
+                    <label>
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAR5JREFUSEvVlF0OATEUhe/shJVgJ6wEK8FKsBJ2wnzJbdKp256GzIMmHkzT8537O9jMZ5hZ33oBCzM7mdnazJ7+O47/b8pgD2Dr4qUWoMv48dCCKACOry6AY8SIBujeI9m1IlEA0oJYEs/NpshI06YWhQI83PHS3eY6RMI9qeI+PL8AEHy5alVHAcg/dYhSRD2ow9nMqMNXEeRpSB2TFxlR8l9tVxUBAslp5BDnRFA9PQAezzpoalib9yoC0rPyQkeTTIveW9NcA9A5DBmp6TmAwomOAPl6qD50OAZoVd6EHRUB0vQ2+zsLq9xNk6kuAV37JchZ3mWToSwBabnJ/g4gKbWT5VcCWstNFTtcfiVALi9B+Xiv5kC5lvf/D3gDooFEGQmY59EAAAAASUVORK5CYII="/>
+                        <input type="text" name="nombres_completos" placeholder="Nombres Completos" required>
+
+                    </label> 
+                    <label>
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANlJREFUSEvtldsNwjAMRU83gU1gE5gEmASYhG4Cm0BvlUgmJHLTx09FPiPHx/fadRsWPs3C+VkXYAdcgc1E217AEWiVx1r06C4FmeMIsk0B75D5ApxGUm7AIbzti7cKIkB3tXZZW2yeIkBw9ULVeGpUtTyPb56eAlVz74LOIbCk5quZQbX6GE/RohigXkRIqiatOqfUBQiUU6P7fgQzVdvZGATIqRnanyqAVaPqrdelia4G1H4af4Dr2I9Fcy47DcI+3UX6YrUWpm7U4rp2NY8JWNcvc4wD7psPPK4yGUSJdKwAAAAASUVORK5CYII="/>
+                        <input type="email" name="correo" placeholder="Escriba su correo" required> 
+
+                    </label>
+                    <label>
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOxJREFUSEvlle0NwiAQht9uopvoJOok6iS6id1EN1GfBBJSjh6FNDGRP21D75774mXQymtY2b9qATtJB0k8WS9J1+/36AVYAzhKuhUcAbnMQTwAET+CA5zdwztQMtpI2oaMTI4HwDkQK1IiPwfoqZSFB3gHQ+s/on+G6MmiKYM5AA69fXeKPAfevgmg5tQ2jqQ3iXGfkc1G16otdaW+LQvIPjW0AG7aBbJp91+A2HwqZOlQd4nS5mfNLJ2JJT1IAajp9PR2Z5AKH6M4lepugCcNvwPoOclZb6wmU2tusKVyUa1FLRpUtPEunG7YB8W5OhmbwRtLAAAAAElFTkSuQmCC"/>
+                        <input type="password" name="contraseña" placeholder="Ponga una contraseña" required>
+                    </label>
+                    <input type="submit" value="Registrarse">
+
+                    
+                 </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-form login hide">
+      
+        <div class="information">
+            <div class="info-childs">
+                <h2>Bienvenido Nuevamente!</h2>
+                
+                
+                <p> Inicia sesion con tus credenciales</p>
+                <input type="button"   value="Registrarse" id="sing-up" >
+                
+
+            </div>
+
+        </div>
+        <div class="form-information">
+            
+            <div class="form-information-childs">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+                <h2>Iniciar Sesion </h2>
+                <div class="icons">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAWBJREFUSEu1lY1NxTAMhP02gUmATWASYBJgEmAS2AT6Vbno8temT6qlqmpi+3yX2L3EyXY5OX/MANxHBM9dev9GBM/38v2VnmGdWwA3EfGWkm4RBewhgTZ+I4CXiHg+IB8gH4s/cYX1AB5T5QfyZ9fXGqQGQJaf5I6+Twt1AMWGSjH8MBLixz7nxD4xrK1WA3ya5u/JWQmVvPftkuJ32wOopXGAPbm4DMTLOPSVhTOoAbLTXvYkmaSVdOuBO4BXUdCcAMDF5aV6CiwAqECHlx0mk+PWLdAZOMA1DDw+F+8ATvEagD9jmy+IA9Tde+QWDWMdgEaBhVvTmdU+Z+aNuHlNdRMIohsBpEM1PVnzZnNJHbe4IKNRoQmpEaCx4Ynq5mqq740K1qTnnjy9iQtLzi7b3riWPIziItAKUbIm+YiBAvyH02MjBs0EnWHgPupuP2D2R+vFRZv5Jx+YFq3r6QD/Wc9YGdHIjH4AAAAASUVORK5CYII="/>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAT1JREFUSEu1lY2NwjAMhV83gUmATWASYBK4Se42ATahX5VEbur8FB2WUFAT+9l+L86gL9vw5fjqAdhL4rcL63Nc/yS9wsr/otUANpJuIWgtBoAHSawLKwFcJJ1XtI/gP+N5/GbmAfQGJyhVWrvmIDkADo9K5gQlyN2csQmxfwrcTEdygN9Gz7dOr/OKAeHcAuAYSC0VQNZkF41q8Ynqsn6QPqnLVtDqve1vK5l01gIgSRxLRvax961kyJ4qZhVAbq4KC7YGIPFgK/AAZoQVSisJY4ptAbyDPQBeYkkQLZLjGCAZOwpsK7174wIw0KjiP0hOfK25aL0kJwV5N7k2KnoB0iXzAPhW0ngPQHPYxf57IC0Au594XPPglAAWE9SqpOfJjEMN8uLzyEjhO3J0XzJvmlYU+vlWTwWfRx8934+GURlCF0MNAAAAAElFTkSuQmCC"/>
+
+                </div>
+                <p>Inicia sesion con una cuenta </p>
+                 <form class="formu" action="/inicio_sesion" method="POST">
+                    
+                    <label>
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANlJREFUSEvtldsNwjAMRU83gU1gE5gEmASYhG4Cm0BvlUgmJHLTx09FPiPHx/fadRsWPs3C+VkXYAdcgc1E217AEWiVx1r06C4FmeMIsk0B75D5ApxGUm7AIbzti7cKIkB3tXZZW2yeIkBw9ULVeGpUtTyPb56eAlVz74LOIbCk5quZQbX6GE/RohigXkRIqiatOqfUBQiUU6P7fgQzVdvZGATIqRnanyqAVaPqrdelia4G1H4af4Dr2I9Fcy47DcI+3UX6YrUWpm7U4rp2NY8JWNcvc4wD7psPPK4yGUSJdKwAAAAASUVORK5CYII="/>
+                        <input type="email" name="correo" placeholder="Escriba su correo" required> 
+
+                    </label>
+                    <label>
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOxJREFUSEvlle0NwiAQht9uopvoJOok6iS6id1EN1GfBBJSjh6FNDGRP21D75774mXQymtY2b9qATtJB0k8WS9J1+/36AVYAzhKuhUcAbnMQTwAET+CA5zdwztQMtpI2oaMTI4HwDkQK1IiPwfoqZSFB3gHQ+s/on+G6MmiKYM5AA69fXeKPAfevgmg5tQ2jqQ3iXGfkc1G16otdaW+LQvIPjW0AG7aBbJp91+A2HwqZOlQd4nS5mfNLJ2JJT1IAajp9PR2Z5AKH6M4lepugCcNvwPoOclZb6wmU2tusKVyUa1FLRpUtPEunG7YB8W5OhmbwRtLAAAAAElFTkSuQmCC"/>
+                        <input type="password" name="contraseña" placeholder="Ponga una contraseña" required>
+                    </label>
+                    <input type="submit" value="Iniciar Sesion">
+
+                    
+                 </form>
+            </div>
+        </div>
+    </div>
+
+
+       
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif; 
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(rgba(191, 224, 247, 0.863), rgb(145, 145, 145)), url('../img/fondo.jpg');
+    background-size: cover;
+}
+
+.alert {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.alert-success { background-color: #d4edda; color: #155724; border-color: #c3e6cb; }
+.alert-warning { background-color: #fff3cd; color: #856404; border-color: #ffeeba; }
+.alert-error { background-color: #f8d7da; color: #721c24; border-color: #f5c6cb; }
+
+.flash-messages {
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    position: relative; /* O prueba con 'absolute' si es necesario */
+    width: 100%;
+    text-align: center;
+    margin-top: 20px; /* Ajusta según necesidad para que no esté demasiado pegado al top */
+}
+
+
+.mi-imagen {
+    background-image: url('../img/LOGO.png');
+    background-size: cover; /* o puedes usar 'contain' según tus necesidades */
+
+    width: 341px; /* Ancho deseado de la imagen */
+    height: 467px; /* Alto deseado de la imagen */
+    margin: 0; /* Eliminar márgenes */
+    background-position: right 15px top; /* Mover la imagen hacia la derecha */
+}
+
+
+.container-form {
+display: flex;
+border-radius: 20px;
+box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
+height: 500px;
+max-width: 900px;
+transition: all 1s ease;
+margin: 10px;
+
+
+}
+.information {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    text-align: end;
+    background-color: #d4d7de;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+   
+}
+.info-childs{
+    width: 100%;
+    padding: 0 20px;
+
+}
+.info-childs h2 {
+    font-size: 2.5rem;
+    
+}
+
+.info-childs p {
+    margin: 15px 0;
+    color: #3b4a6b;
+}
+
+.info-childs input {
+    background-color: transparent;
+    outline: none;
+    border:solid 2px #3b4a6b;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #3b4a6b;
+    cursor: pointer;
+    transition: background-color .3s ease;
+
+}
+.info-childs input:hover {
+    background-color: #3b4a6b;
+    border: none;
+    color: #d4d7de;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+
+}
+.form-information{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    text-align: center;
+    background-color: #F7F6F0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+   
+}
+.form-information-childs{
+    padding: 0 30px;
+
+}
+.form-information-childs h2{ 
+    color: #3b4a6b;
+    font-size: 2rem;
+}
+.icons{
+    margin: 15px 0;
+}
+
+.icons {
+    border-radius: 0%;
+    padding: 5px;
+    cursor: pointer;
+    margin: 0%;
+    color: #d4d7de;
+    transition: background-color 0.3s ease;
+   
+   
+}
+
+.formu { 
+    margin: 30px 0 0 0;
+}
+.formu label { 
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    padding: 0 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+   
+}
+.formu label input {
+    width: 100%;
+    padding: 10px;
+    background-color: #F7F6F0;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #3b4a6b; 
+}
+.formu input[type="submit"]{
+background-color: darkgrey;
+color: #F7F6F0;
+border-radius: 20px;
+border: none;
+padding: 10px 15px;
+cursor: pointer;
+margin-top: 10px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+.formu input[type="submit"]:hover{
+background-color: #3b4a6b;
+
+
+}
+.hide{
+    position: absolute;
+    transform: translateY(-300%);
+}
+
+
+/*RESPONSIVE FORM */ 
+@media screen and (max-width:750px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:580px) {
+    html {
+        font-size: 10px;
+    }
+    .container-form{
+        height: auto;
+        flex-direction: column;
+    }
+    .information{
+        width: 100%;
+        padding: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0px ;
+        border-bottom-right-radius: 0px;
+
+    }
+    .form-information{
+        width: 100%;
+        padding: 20px;
+        border-bottom-left-radius: 0px;
+       border-top-right-radius: 0;
+
+    }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/app/static/css/styleinstrucciones.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <script src="/app/static/js/scriptInstrucciones.js"></script>
+
+    <title>Instrucciones</title>
+
+</head>
+<body>
+    <div class="image-container"></div>
+    <div class="container">
+        <h2>Instrucciones</h2>
+            <p>Este test tiene como objetivo conocer qué tipo de persona has sido. </p>
+            <p>Para responder, sé honesto contigo mismo y responde cada pregunta de la manera más sincera posible.</p>
+            <p>A continuación, encontrarás una serie de preguntas y algunas imágenes. Las preguntas te ayudarán a describir tus sentimientos y actitudes, y las imágenes pueden servir como estímulo para tus respuestas.</p>
+            <p>No te preocupes si algunas preguntas te parecen extrañas; están incluidas para describir los diferentes aspectos de la personalidad.</p>
+            <p>Intenta responder a todas las preguntas, incluso si no estás totalmente seguro. Es mejor contestar todas para obtener un diagnóstico correcto.</p>
+            <audio id="audioInstructions" autoplay style="display:none;"></audio>
+            <div class="info-childs">
+            <input type="button"   value="Continuar" onclick="animateContainer()">
+            <input type="button"   value="Regresar" >      
+        </div>  
+    </div>
+</body>
+</html>
