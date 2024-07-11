@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/app/static/css/stylePrincpial.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/stylePrincpial.css') }}">
+
+<script src="/app/static/js/scriptPrincipal.js"></script>   
+<script src="{{ url_for('static', filename='js/scriptPrincipal.js') }}"></script>
+
+<style>
+  #texto {
+    font-family: 'Montserrat', sans-serif; /* Aplicar la fuente Montserrat */
+  }
+</style>
+<title>Principal</title>
+
+
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="header">
+      <div class="test-title">TEST DE PERSONALIDAD</div>
+      <div class="logo-container">
+        <img src="../static/img/TEXTC.png" alt="Logo image">
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="left-column">
+        <div class="profile-container">
+          <img src="https://placehold.co/200x200" alt="Profile image description">
+        </div>
+        <div class="status">
+          <img src="https://placehold.co/20x20" alt="Status icon">
+          <span>CONTENTO</span>
+        </div>
+        <div class="timer" id="timer">00:00:01</div>
+        
+      </div>
+      
+      <div class="center-column">
+        <div class="containertext">
+          <div class="card h2" id="text-container"></div>
+          <h2 id="text1" class="text active">Pregunta1: ¿Qué ves en esta primera imagen?.</h2>
+          <h2 id="text2" class="text">Pregunta2: En esta imagen ¿Ves a dos personas?.</h2>
+          <h2 id="text3" class="text">Pregunta3: ¿Cómo ves a estos individuos?.</h2>           
+          <h2 id="text4" class="text">Pregunta4: ¿Ves a un animal atacando o la piel de un oso? ¿es agresiva?.</h2>
+          <h2 id="text5" class="text">Pregunta5: ¿Qué ves en esta primera imagen?.</h2>
+          <h2 id="text6" class="text">Pregunta6: ¿Qué te transmite la imagen?.</h2>           
+          <h2 id="text7" class="text">Pregunta7: ¿Qué te transmite la imagen?.</h2>
+          <h2 id="text8" class="text">Pregunta8: ¿Qué son las manchas rosas?.</h2>
+          <h2 id="text9" class="text">Pregunta9: ¿Describe la siguiente imagen?.</h2>           
+          <h2 id="text10" class="text">Pregunta10: ¿Qué observas en la imagen?.</h2>
+          <h2 id="text11" class="text">Pregunta11: ¿Describe la siguiente imagen?.</h2>           
+          <h2 id="text12" class="text">Pregunta12: ¿Qué observas en la imagen?.</h2>
+        </div>
+        <div class="image-container">
+          <img alt="Imagen Dinámica">
+        </div>
+        <div class="textarea-container">
+        <textarea id="texto" cols="93" rows="5"></textarea>
+        <div class="footer2">
+          <button id="btnStartRecord" class="button">Grabar</button>
+          <button id="btnStopRecord" class="button">Finalizar</button>
+          <button id="changeTextButton" class="button">Enviar</button>
+        </div>
+        </div>
+      </div>
+
+      <div class="right-column">
+        <div class="robot-container">
+          <img src="../static/img/EVA.gif" alt="Robot image">
+        </div>
+      </div>
+    
+      </div>
+      <div class="footer">
+
+        <form action="/perfil" method="get">
+        <input type="submit"   value="Continuar" onclick="animateContainer()">
+        </form>
+        <input type="button"   value="Regresar" > 
+      </div>
+    </div>
+</body>
+</html>
