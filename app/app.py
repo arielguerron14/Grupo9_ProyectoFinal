@@ -9,7 +9,6 @@ import openai  # Para interactuar con la API de OpenAI
 client = MongoClient('mongodb://localhost:27017/')
 db = client['C']  # Nombre de la base de datos en MongoDB
 
-
 # Configuración de la aplicación Flask
 app = Flask(__name__, static_folder='static')  # Creación de la aplicación Flask
 app.secret_key = 'tu_clave_secreta_aqui'  # Clave secreta para sesiones de Flask
