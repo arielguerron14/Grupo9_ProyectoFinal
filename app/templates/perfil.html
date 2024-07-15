@@ -23,7 +23,7 @@
 
 <div class="main-container">
     <div class="header">
-            <div class="test-title">RESULTADOS DEL TEST PERSONALIDAD</div>
+            <div class="test-title">RESULTADOS DEL EXAMEN</div>
             <div class="logo-container">
             <img src="/app/static/img/TEXTC.png" alt="Logo image">
             </div>
@@ -34,17 +34,13 @@
             
                 <div class="subcontainer">
                     <h3>Recomendaciones</h3>
-                    <p>Te recoemndamos que..</p>
+                    <h4>Verifica los resultados con un medico de confianza</h4>
+                    <h4></h4>
                 </div>
                 <div class="subcontainer">
                     <h3>Videos</h3>
-                    <p>VIDEOS</p>
-                </div>
-                <div class="subcontainer">
-                    <h3>ANEXOS</h3>
-                    <p>ANEXOS</p>
-                    <div class="bottom-section">
-                    </div>
+                    <p>https://www.youtube.com/watch?v=AoOcKHss94c&ab_channel=IESSecu </p>
+                    <p></p>
                 </div>
             
         </div>
@@ -62,7 +58,7 @@
                 <div class="subcontainer">
                     <div class="split-container">
                         <div class="top-section">
-                            <h3>TEST PRELIMINAR</h3>
+                            <h3></h3>
                             <p>--TEXTO AQUI--</p>
                         </div>
                         <div class="bottom-section">
@@ -73,7 +69,12 @@
                     <div class="split-container">
                         <div class="top-section">
                             <h3>DIAGNÓSTICO</h3>
-                            <p>--TEXTO AQUI--</p>
+                            {% for etiqueta, diagnostico in diagnosticos %}
+                            <div>
+                                <h2>{{ etiqueta }}</h2>
+                                <p>{{ diagnostico }}</p>
+                            </div>
+                            {% endfor %}
                         </div>
                         <div class="bottom-section">
                         </div>
@@ -82,27 +83,28 @@
                 <div class="subcontainer">
                     <div class="split-container">
                         <div class="top-section">
-                            <h3>DESTREZAS DEL USUARIO</h3>
-                            <p>--TEXTO AQUI--</p>
+                            <h3>RECOMENDACIONS</h3>
+                            <p>Siempre busca una segunda opinion</p>
+                            <p></p>
                         </div>
                         <div class="bottom-section">
                         </div>
                     </div>
                 </div>
                 <div class="buttons">
-                    <a href="{{ url_for('descargar_resultados') }}" class="btn">DESCARGAR RESULTADOS</a>
-
-
                     <button class="btn">FINALIZAR</button>
                 </div>
         </div>    
 
         <div class="containerderecha">
+            <div class="subcontainer">
+                <img src="/app/static/img/EVASALUDO.gif" alt="image DE LOGOTEM">
+            </div>
                 <div class="evasaludo-container">
                 <img src="/app/static/img/EVASALUDO.gif" alt="image DE LOGOTEM">
                 </div>
             <div class="subcontainer">
-                <p>CHAT BOT</p>
+                <img src="/app/static/img/EVASALUDO.gif" alt="image DE LOGOTEM">
             </div>
         </div>    
     </div>
