@@ -1,8 +1,8 @@
 # Importación de módulos necesarios
 from flask import Flask, render_template, request, redirect, url_for, session, flash, jsonify
-from flask_weasyprint import HTML, render_pdf  # Para renderizar PDFs en Flask
+
 from models.models import Usuario, agregar_usuario, obtener_usuario_por_correo, existe_usuario  # Importación de modelos y funciones de base de datos
-from pymongo import MongoClient  # Cliente MongoDB para la base de datos
+
 import openai  # Para interactuar con la API de OpenAI
 
 # Conexión a MongoDB
