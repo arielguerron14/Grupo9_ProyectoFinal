@@ -1,8 +1,8 @@
 # Importación de módulos necesarios
 from flask import Flask, render_template, request, redirect, url_for, session, flash, jsonify
-
+from flask_weasyprint import HTML, render_pdf  # Para renderizar PDFs en Flask
 from models.models import Usuario, agregar_usuario, obtener_usuario_por_correo, existe_usuario  # Importación de modelos y funciones de base de datos
-
+from pymongo import MongoClient  # Cliente MongoDB para la base de datos
 import openai  # Para interactuar con la API de OpenAI
 
 # Conexión a MongoDB
@@ -58,12 +58,16 @@ def inicio_sesion():
         if usuario and usuario.verificar_contraseña(contraseña):
             # Establece una sesión para el usuario logueado
             session['usuario_logueado'] = usuario.correo
-            return redirect(url_for('funcionamiento'))
+            return redirect(url_for('instruciones'))
         else:
             flash('Correo electrónico o contraseña incorrecta.', 'error')
             return redirect(url_for('index'))
     
     return redirect(url_for('index'))
+
+@app.route('/instruciones')
+def instruciones():
+    return render_template('instruciones.html')
 
 @app.route('/funcionamiento')
 def funcionamiento():
@@ -77,6 +81,12 @@ def funcionamiento():
     correo = session['usuario_logueado']
     usuario = obtener_usuario_por_correo(correo)
     return render_template('funcionamiento.html', usuario=usuario)
+
+@app.route('/principal')
+def principal():
+    return render_template('principal.html')
+
+
 
 @app.route('/guardar_respuesta', methods=['POST'])
 def guardar_respuesta():
