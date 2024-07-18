@@ -4,11 +4,18 @@ from flask_weasyprint import HTML, render_pdf  # Para renderizar PDFs en Flask
 from models.models import Usuario, agregar_usuario, obtener_usuario_por_correo, existe_usuario  # Importación de modelos y funciones de base de datos
 import openai  # Para interactuar con la API de OpenAI
 
+import pytesseract
+from PIL import Image
+
+
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+
 
 
 # Configuración de la aplicación Flask
 app = Flask(__name__, static_folder='static')  # Creación de la aplicación Flask
 app.secret_key = 'tu_clave_secreta_aqui'  # Clave secreta para sesiones de Flask
+
 
 @app.route('/')
 def index():
@@ -159,6 +166,34 @@ def descargar_resultados():
     # Renderiza la plantilla 'resultados_pdf.html' y genera el PDF
     html = render_template('resultados_pdf.html', diagnosticos=diagnosticos)
     return render_pdf(HTML(string=html))
+
+@app.route('/upload_image', methods=['POST'])
+def upload_image():
+    if 'image' not in request.files:
+        flash('No image uploaded', 'error')
+        return redirect(url_for('index'))
+
+    image = request.files['image']
+    image = Image.open(image)
+    # Extracción de texto utilizando Tesseract
+    extracted_text = pytesseract.image_to_string(image)
+
+    # Obtener texto adicional del formulario
+    additional_text = request.form.get('additional_text', '')
+
+    # Análisis del texto utilizando la nueva API de GPT-4
+    response = openai.ChatCompletion.create(
+        model="gpt-4",
+        messages=[
+        {"role": "system", "content": "Eres un asistente médico útil."},
+        {"role": "user", "content": f"Brindar posibles recomendaciones precisas basadas en el siguiente texto extraído de una imagen médica: {extracted_text} y la información adicional: {additional_text}"}
+        ],
+        max_tokens=500
+    )
+
+    analysis = response.choices[0].message['content'].strip()
+
+    return render_template('perfil.html',  extracted_text=extracted_text, additional_text=additional_text, analysis=analysis, usuario=usuario)
 
 if __name__ == '__main__':
     app.run(debug=True)

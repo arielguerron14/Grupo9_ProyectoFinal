@@ -49,9 +49,7 @@
         <div class="containertext">
           <div class="card h2" id="text-container"></div>
           <h2>
-            <form action="/perfil" method="get" enctype="multipart/form-data">
-              <input type="file" name="file-upload" id="file-upload">
-            </form>
+            <textarea name="additional_text" id="texto" cols="93" rows="5" placeholder="Ingrese información adicional sobre síntomas u otros detalles relevantes"></textarea>
           </h2>
         </div>
         
@@ -59,19 +57,22 @@
         <div class="timer" id="timer">00:00:01</div>
       </div>
 
+      <div class="Seleciona el archivo de tus resultados">
+        
+      </div>
+
       <!-- Columna Central -->
       <div class="center-column">
-        <div class="containertext">
-          <div class="card h2" id="text-container"></div>
-          <h2 id="text1" class="text active">Aquí puedes agregar si tienes algún síntoma.</h2>
+        <h1>Upload Medical History</h1>
+        <form action="upload_image" method="post" enctype="multipart/form-data">
+          <input type="file" name="image" accept="image/*" required>
+         <div class="footer2">
+          <button type="submit" class="button">Upload</button>
         </div>
-        <div class="textarea-container">
-          <textarea id="texto" cols="93" rows="5"></textarea>
-          <div class="footer2">
-            <button id="btnStartRecord" class="button">Grabar</button>
-            <button id="btnStopRecord" class="button">Finalizar</button>
-          </div>
-        </div>
+      </form>
+        
+            
+        </form>
       </div>
       <!-- Columna Derecha -->
       <div class="right-column">
